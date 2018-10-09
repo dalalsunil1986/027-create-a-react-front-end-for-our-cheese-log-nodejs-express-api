@@ -1,13 +1,13 @@
 import React from 'react'
 
-import LogEntries from './features/log-entries'
+import Router from './config/router'
+import Navbar from './features/navbar'
 
 class App extends React.Component {
   render() {
     return <div className="content">
-      <h1>The Great Cheese Log</h1>
-
-      <LogEntries />
+      <Navbar />
+      <Router />
     </div>
   }
 }
