@@ -13,7 +13,10 @@ class LogEntries extends React.Component {
 
   render() {
     const { entries, loaded } = this.props
-    return <LogEntryTable entries={entries} loaded={loaded} />
+    return <div>
+      <h1>Log Entries</h1>
+      <LogEntryTable entries={entries} loaded={loaded} />
+    </div>
   }
 }
 
