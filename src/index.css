@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(36, 153, 254);
+  background-color: #46aaff;
   height: 100%;
   width: 100%;
   margin: 0;
@@ -23,4 +23,29 @@ body {
 h1 {
   margin: 0;
   padding: 1em 0.5em;
+}
+
+table {
+  border-spacing: 0;
+  padding: 4px;
+  table-layout: fixed;
+}
+
+table tr {
+  border-collapse: collapse;
+  box-sizing: content-box;
+}
+
+table thead tr th {
+  padding: 4px 0;
+  border-bottom: 1px solid #8f8f8f;
+  text-align: left;
+}
+
+table tbody tr td {
+  padding: 4px 0;
+}
+
+table tbody tr:hover {
+  background-color: #8fcbff;
 }
