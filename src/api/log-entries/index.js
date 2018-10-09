@@ -12,3 +12,8 @@ export function createLogEntry(values) {
 export function getLogEntry(id) {
   return api('get', `log-entries/${id}`)
 }
+
+export function updateLogEntry(id, values) {
+  const { no, type, ingredients, process } = values
+  return api('put', `log-entries/${id}`, { no, type, ingredients, process })
+}

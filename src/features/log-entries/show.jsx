@@ -1,5 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { Link } from 'react-router-dom'
 
 import { getLogEntry } from '../../api/log-entries'
 
@@ -12,8 +13,9 @@ class ShowLogEntry extends React.Component {
   }
 
   renderEntry() {
-    const { logEntry: { no, type, ingredients, process} } = this.props
+    const { logEntry: { _id, no, type, ingredients, process} } = this.props
     return <div>
+      <div><Link to={`/log-entries/${_id}/edit`}>Edit</Link></div>
       <div><strong>No.</strong> { no }</div>
       <div><strong>Type</strong> { type }</div>
       <div>

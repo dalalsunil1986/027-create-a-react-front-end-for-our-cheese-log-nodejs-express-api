@@ -46,7 +46,7 @@ function LogEntryForm(props) {
         type="submit"
         className="primary"
         disabled={!valid || submitting}
-      >Create</button>
+      >Save</button>
       <button
         type="button"
         className="secondary"
