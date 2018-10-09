@@ -15,9 +15,10 @@ body {
 
 .content {
   width: 680px;
-  height: 100vh;
   margin: 0px auto;
+  padding: 1em;
   background-color: white;
+  position: relative;
 }
 
 h1 {
@@ -33,7 +34,7 @@ table {
 
 table tr {
   border-collapse: collapse;
-  box-sizing: content-box;
+  box-sizing: border-box;
 }
 
 table thead tr th {
