@@ -8,6 +8,7 @@ function submitForm(values, props) {
   const { persistLogEntry } = props
   createLogEntry(values).then(json => {
     persistLogEntry({ entry: json })
+    props.history.push(`/log-entries/${json.id}`)
   })
 }
 
