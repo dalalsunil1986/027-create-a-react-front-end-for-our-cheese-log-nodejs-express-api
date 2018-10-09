@@ -1,9 +1,11 @@
 import { createStore, combineReducers } from 'redux'
+import { reducer as formReducer } from 'redux-form'
 
 import logEntriesReducer from '../features/log-entries/reducer'
 
 const rootReducer = combineReducers({
   logEntries: logEntriesReducer,
+  form: formReducer,
 })
 
 const store = createStore(

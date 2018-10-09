@@ -1,23 +1,4 @@
-body {
-  background-color: #46aaff;
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-#root {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-.content {
-  width: 680px;
-  height: 100vh;
-  margin: 0px auto;
-  background-color: white;
+position: relative;
 }
 
 h1 {
@@ -33,7 +14,7 @@ table {
 
 table tr {
   border-collapse: collapse;
-  box-sizing: content-box;
+  box-sizing: border-box;
 }
 
 table thead tr th {
@@ -48,4 +29,10 @@ table tbody tr td {
 
 table tbody tr:hover {
   background-color: #8fcbff;
+}
+
+span.error {
+  color: red;
+  font-weight: normal;
+  padding-left: 2px;
 }
