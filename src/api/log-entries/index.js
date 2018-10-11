@@ -17,3 +17,7 @@ export function updateLogEntry(id, values) {
   const { no, type, ingredients, process } = values
   return api('put', `log-entries/${id}`, { no, type, ingredients, process })
 }
+
+export function deleteLogEntry(id) {
+  return api('delete', `log-entries/${id}`)
+}

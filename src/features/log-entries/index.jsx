@@ -12,10 +12,10 @@ class LogEntries extends React.Component {
   }
 
   render() {
-    const { entries, loaded } = this.props
+    const { entries, loaded, persistLogEntries } = this.props
     return <div>
       <h1>Log Entries</h1>
-      <LogEntryTable entries={entries} loaded={loaded} />
+      <LogEntryTable persistLogEntries={persistLogEntries} entries={entries} loaded={loaded} />
     </div>
   }
 }

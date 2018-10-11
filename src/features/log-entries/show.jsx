@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 
-import { getLogEntry } from '../../api/log-entries'
+import { getLogEntry, deleteLogEntry } from '../../api/log-entries'
 
 class ShowLogEntry extends React.Component {
   componentDidMount() {
@@ -13,9 +13,17 @@ class ShowLogEntry extends React.Component {
   }
 
   renderEntry() {
-    const { logEntry: { _id, no, type, ingredients, process} } = this.props
+    const { logEntry: { _id, no, type, ingredients, process }, history } = this.props
     return <div>
-      <div><Link to={`/log-entries/${_id}/edit`}>Edit</Link></div>
+      <div>
+        <Link to={`/log-entries/${_id}/edit`}>Edit</Link> | 
+        <a href="#delete" onClick={() => {
+          if (window.confirm(`Are you sure you want to delete this log entry? (${_id})`)) {
+            deleteLogEntry(_id)
+            history.push(`/`)
+          }
+        }}>Delete</a>
+      </div>
       <div><strong>No.</strong> { no }</div>
       <div><strong>Type</strong> { type }</div>
       <div>
